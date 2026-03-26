@@ -7,7 +7,7 @@ status: "ongoing"
 domain: machine-learning
 image: "/assets/images/SAE.jpg"
 has_github: true
-github: "https://github.com/jasonp02/sae-investigations"
+github: "https://github.com/thajpo/sae-investigations"
 ---
 
 ## Overview

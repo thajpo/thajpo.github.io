@@ -7,7 +7,7 @@ status: "completed"
 domain: robotics
 image: "/assets/images/SLAM.jpg"
 has_github: true
-github: "https://github.com/jasonp02/SLAM_MH01"
+github: "https://github.com/thajpo/SLAM_MH01"
 ---
 
 ## Overview

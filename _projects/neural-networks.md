@@ -7,7 +7,7 @@ status: "completed"
 domain: machine-learning
 image: "/assets/images/NeuralNetworks.jpg"
 has_github: true
-github: "https://github.com/jasonp02/nn-from-scratch"
+github: "https://github.com/thajpo/nn-from-scratch"
 ---
 
 ## Overview

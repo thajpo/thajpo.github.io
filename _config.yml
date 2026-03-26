@@ -8,7 +8,7 @@ email: jasondpett@gmail.com
 
 baseurl: "" 
 
-url: "https://jasonp02.github.io" 
+url: "https://thajpo.github.io" 
 
 
 
@@ -104,7 +104,7 @@ defaults:
 
 
 # GitHub Metadata settings
-repository: jasonp02/jasonp02.github.io
+repository: thajpo/jpo.github.io
 github: [metadata]
 
 include:

@@ -10,7 +10,7 @@ has_github: false
 ---
 
 ## Overview
-Two-semester research project at the [Intelligent Sensing Lab](https://websites.umass.edu/xiandu/) at UMass Amherst focused on autonomous manipulation of water-filled cups using the Kobuki low cost robot platform. In this project I used ROS with an intel depth camera to estimate a cup position. Using this information, we were able to pick up the cup. Future progress on this project was prevented due to a fire in the lab, and I transitioned to a [different project with deep learning](https://jasonp02.github.io/projects/graph-neural-network/).
+Two-semester research project at the [Intelligent Sensing Lab](https://websites.umass.edu/xiandu/) at UMass Amherst focused on autonomous manipulation of water-filled cups using the Kobuki low cost robot platform. In this project I used ROS with an intel depth camera to estimate a cup position. Using this information, we were able to pick up the cup. Future progress on this project was prevented due to a fire in the lab, and I transitioned to a [different project with deep learning](https://thajpo.github.io/projects/graph-neural-network/).
 
 ## Technical Details
 • Implemented ROS control systems.

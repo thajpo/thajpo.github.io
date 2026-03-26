@@ -7,7 +7,7 @@ status: "completed"
 domain: machine-learning
 image: "/assets/images/GNN.jpg"
 has_github: true
-github: "https://github.com/JasonP02/ChildAnomalyDetection"
+github: "https://github.com/thajpo/ChildAnomalyDetection"
 ---
 
 ## Overview

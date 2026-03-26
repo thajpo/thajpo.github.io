@@ -7,7 +7,7 @@ status: "completed"
 domain: robotics
 image: "/assets/images/adaptive-arm.jpg"
 has_github: true
-github: "https://github.com/jasonp02/adaptive-control"
+github: "https://github.com/thajpo/adaptive-control"
 has_report: true
 report: "/assets/pdfs/adaptive_control_report.pdf"
 ---
