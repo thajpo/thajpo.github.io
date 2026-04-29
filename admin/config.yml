@@ -1,12 +1,12 @@
 backend:
   name: github
-  repo: thajpo/jpo.github.io
+  repo: thajpo/thajpo.github.io
   branch: main
   use_graphql: true
   # GitHub Pages cannot run the OAuth callback itself. After deploying an
   # OAuth proxy, uncomment and set this to the proxy origin.
-  # base_url: https://cms-auth.example.com
-  # auth_endpoint: auth
+  base_url: https://procurement-chapter-anywhere-suppliers.trycloudflare.com
+  auth_endpoint: auth
 
 publish_mode: editorial_workflow
 

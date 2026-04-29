@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+docker run --rm --network host cloudflare/cloudflared:latest tunnel --url http://localhost:3000
