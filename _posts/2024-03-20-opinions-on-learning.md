@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Placeholder Post"
+title: Placeholder Post
 date: 2025-02-05
 ---
-
-## ...
+aaaaaaaaaaaaaaaaaaa
