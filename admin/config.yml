@@ -19,8 +19,10 @@ collections:
     label_singular: Blog Post
     folder: _posts
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} - {{date}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.slug}}"
+    preview_path: "blog/{{year}}/{{month}}/{{day}}/{{fields.slug}}/"
+    preview_path_date_field: date
+    summary: "{{title}} - {{date}} - {{fields.slug}}"
     fields:
       - name: layout
         label: Layout
@@ -29,6 +31,13 @@ collections:
       - name: title
         label: Title
         widget: string
+      - name: slug
+        label: URL Slug
+        widget: string
+        hint: Lowercase words separated by hyphens. This becomes the final URL segment.
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Use lowercase letters, numbers, and single hyphens only."
       - name: date
         label: Date
         widget: datetime
