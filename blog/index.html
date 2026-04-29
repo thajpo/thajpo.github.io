@@ -3,6 +3,8 @@ layout: default
 title: Blog
 ---
 
+{% assign build_version = site.time | date: "%s" %}
+
 <div class="blog-section">
   <div class="blog-header">
     <h1>Blog</h1>
@@ -19,7 +21,7 @@ title: Blog
         {% endif %}
         <div class="post-content">
           <h2>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <a href="{{ post.url | relative_url }}?v={{ build_version }}">{{ post.title }}</a>
           </h2>
           <div class="post-meta">
             <time datetime="{{ post.date | date_to_xmlschema }}">
