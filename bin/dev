@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+docker run --rm -it \
+  --user "$(id -u):$(id -g)" \
+  --env HOME=/tmp \
+  --env BUNDLE_PATH=vendor/bundle \
+  --env BUNDLE_APP_CONFIG=.bundle \
+  --volume "$PWD:/srv/jekyll" \
+  --publish 4000:4000 \
+  --publish 35729:35729 \
+  --workdir /srv/jekyll \
+  ruby:3.3 \
+  bash -lc 'bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload'

@@ -1,0 +1,148 @@
+backend:
+  name: github
+  repo: thajpo/jpo.github.io
+  branch: main
+  use_graphql: true
+  # GitHub Pages cannot run the OAuth callback itself. After deploying an
+  # OAuth proxy, uncomment and set this to the proxy origin.
+  # base_url: https://cms-auth.example.com
+  # auth_endpoint: auth
+
+publish_mode: editorial_workflow
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: posts
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} - {{date}}"
+    fields:
+      - name: layout
+        label: Layout
+        widget: hidden
+        default: post
+      - name: title
+        label: Title
+        widget: string
+      - name: date
+        label: Date
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+      - name: body
+        label: Body
+        widget: markdown
+
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: _projects
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} - {{domain}} - {{status}}"
+    fields:
+      - name: layout
+        label: Layout
+        widget: hidden
+        default: project
+      - name: title
+        label: Title
+        widget: string
+      - name: subtitle
+        label: Subtitle
+        widget: string
+        required: false
+      - name: card_subtitle
+        label: Card Subtitle
+        widget: text
+        required: false
+        hint: Optional shorter summary for the homepage project list.
+      - name: date
+        label: Sort Date
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+        required: false
+        hint: Use for newer projects that sort by a single date.
+      - name: project_date
+        label: Display Date Range
+        widget: string
+        required: false
+        hint: 'Example: "August 2023 - May 2024".'
+      - name: status
+        label: Status
+        widget: select
+        options:
+          - label: Done
+            value: done
+          - label: Work in Progress
+            value: wip
+        default: wip
+      - name: domain
+        label: Domain
+        widget: select
+        options:
+          - label: ML
+            value: machine-learning
+          - label: Robotics
+            value: robotics
+          - label: Mechanical
+            value: design
+          - label: Other
+            value: other
+      - name: starred
+        label: Starred
+        widget: boolean
+        default: false
+        required: false
+      - name: star_rank
+        label: Star Rank
+        widget: number
+        value_type: int
+        min: 1
+        required: false
+        hint: Lower numbers appear first in the starred section.
+      - name: image
+        label: Image
+        widget: image
+        required: false
+      - name: header_image
+        label: Header Image
+        widget: image
+        required: false
+      - name: has_github
+        label: Has GitHub Link
+        widget: boolean
+        default: false
+      - name: github
+        label: GitHub URL
+        widget: string
+        required: false
+      - name: has_report
+        label: Has Report
+        widget: boolean
+        default: false
+        required: false
+      - name: report
+        label: Report PDF
+        widget: file
+        required: false
+      - name: has_presentation
+        label: Has Presentation
+        widget: boolean
+        default: false
+        required: false
+      - name: presentation
+        label: Presentation
+        widget: file
+        required: false
+      - name: body
+        label: Body
+        widget: markdown

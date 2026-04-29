@@ -3,7 +3,7 @@ layout: project
 title: "HMI-PLC Integration System"
 subtitle: "Industrial automation control interface"
 project_date: "September 2024 - December 2024"
-status: "completed"
+status: wip
 domain: other
 image: "/assets/images/HMI.png"
 has_github: false

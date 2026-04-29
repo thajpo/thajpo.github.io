@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "SO-101 Open-Source Bimanual Arm"
+card_subtitle: "Simulation and control setup for dual open-source robot arms across Genesis, MuJoCo, MJX, and Feetech hardware."
 date: 2026-02-05
 domain: robotics
 image: "/assets/images/adaptive-arm.jpg"

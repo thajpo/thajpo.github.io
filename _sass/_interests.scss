@@ -19,7 +19,7 @@
 
   &:hover {
     background: var(--color-accent);
-    color: white;
+    color: var(--color-background);
     transform: translateY(-2px);
   }
 }

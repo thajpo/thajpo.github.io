@@ -3,7 +3,7 @@ layout: project
 title: "Neural Networks from Scratch"
 subtitle: "Building deep learning architectures using only NumPy"
 project_date : "November 2024 - December 2024"
-status: "completed"
+status: wip
 domain: machine-learning
 image: "/assets/images/NeuralNetworks.jpg"
 has_github: true

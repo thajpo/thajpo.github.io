@@ -1,16 +1,7 @@
 <nav>
   <ul>
     <li><a href="{{ '/#about' | relative_url }}">About</a></li>
-    <li class="dropdown">
-      <a href="{{ '/#projects' | relative_url }}">Projects</a>
-      <div class="dropdown-content">
-        {% for domain in site.data.domains %}
-          <a href="{{ '/#' | append: domain.id | relative_url }}">{{ domain.name }}</a>
-        {% endfor %}
-      </div>
-    </li>
-    <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
-    <li><a href="{{ '/assets/images/resume.pdf' | relative_url }}" target="_blank">Resume</a></li>
-    <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+    <li><a href="{{ '/#projects' | relative_url }}">Projects</a></li>
+    <li><a href="{{ '/blog' | relative_url }}">Writing</a></li>
   </ul>
 </nav>

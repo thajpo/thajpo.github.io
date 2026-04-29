@@ -3,7 +3,7 @@ layout: project
 title: "Adaptive PID Control Simulation"
 subtitle: "Robotic arm trajectory control under external forces"
 project_date: "October 2024 - December 2024"
-status: "completed"
+status: wip
 domain: robotics
 image: "/assets/images/adaptive-arm.jpg"
 has_github: true

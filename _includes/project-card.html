@@ -1,14 +1,24 @@
-<a href="{{ project.url | relative_url }}" class="project-card">
-  <div class="project-image-container">
-    <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+<div class="project-card">
+  <span class="project-status {{ project.status | default: 'wip' }}">{{ project.status | default: "wip" }}</span>
+  <div class="project-card-main">
+    <h4>
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      {% if project.has_github and project.github %}
+        <a class="project-github" href="{{ project.github }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.title }} on GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      {% endif %}
+    </h4>
+    {% assign card_subtitle = project.card_subtitle | default: project.subtitle %}
+    {% if card_subtitle %}
+      <p>{{ card_subtitle }}</p>
+    {% endif %}
   </div>
-  <div class="project-title-bar">
-    <div class="title-status-wrapper">
-      <span class="status-dot {{ project.status }}"></span>
-      <h5>{{ project.title }} ({{ project.project_date | split: " - " | first }})</h5>
-    </div>
-  </div>
-  <div class="project-info">
-    <div class="project-overview">{{ project.subtitle }}</div>
-  </div>
-</a>
+  <span class="project-meta-end">
+    {% if project.project_date %}
+      <span class="project-year">{{ project.project_date | split: " - " | first }}</span>
+    {% elsif project.date %}
+      <span class="project-year">{{ project.date | date: "%Y" }}</span>
+    {% endif %}
+  </span>
+</div>

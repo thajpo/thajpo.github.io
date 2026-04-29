@@ -3,7 +3,7 @@ layout: project
 title: "Faulty Drill Bit Analysis"
 subtitle: "Machine learning classification of drill bit conditions"
 project_date: "April 2024 - May 2024"
-status: "completed"
+status: wip
 domain: machine-learning
 image: "/assets/images/drill-press.jpg"
 has_github: false

@@ -1,8 +1,12 @@
 ---
 layout: project
 title: "SleepyDreamyV3: RL Dynamics"
+card_subtitle: "PyTorch DreamerV3 refactor focused on posterior conditioning, UniMix behavior, and stable off-policy evaluation."
 date: 2026-02-28
 domain: machine-learning
+starred: true
+star_rank: 2
+status: done
 image: "/assets/images/SAE.jpg"
 has_github: true
 github: "https://github.com/thajpo/SleepyDreamyV3"

@@ -1,8 +1,12 @@
 ---
 layout: project
 title: "Custom Rust Interpreter"
+card_subtitle: "From-scratch Rust interpreter built to practice ownership, error handling, AST compilation, and exhaustive matching."
 date: 2026-01-08
-domain: systems
+domain: other
+starred: true
+star_rank: 6
+status: done
 image: "/assets/images/SLAM.jpg"
 has_github: true
 github: "https://github.com/thajpo/rust-interpreter"

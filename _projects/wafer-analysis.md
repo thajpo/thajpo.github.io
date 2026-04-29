@@ -3,7 +3,7 @@ layout: project
 title: "Semiconductor Wafer Process Analysis"
 subtitle: "Statistical process control using PCA and Hotelling T²"
 project_date: "January 2024 - February 2024"
-status: "completed"
+status: wip
 domain: machine-learning
 image: "/assets/images/PCA.png"
 has_github: false

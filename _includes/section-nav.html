@@ -1,0 +1,26 @@
+{% if page.url == "/" %}
+  <aside class="section-nav" aria-label="Page sections">
+    <a href="#about">About</a>
+    <a href="#starred">Starred</a>
+    <a href="#machine-learning">ML</a>
+    <a href="#robotics">Robotics</a>
+    <a href="#design">Mechanical</a>
+    <a href="#other">Other</a>
+  </aside>
+  <div class="mobile-section-nav" aria-label="Page sections">
+    <a href="#about">About</a>
+    <a href="#starred">Starred</a>
+    <a href="#machine-learning">ML</a>
+    <a href="#robotics">Robotics</a>
+    <a href="#design">Mechanical</a>
+    <a href="#other">Other</a>
+  </div>
+{% elsif page.url == "/blog/" %}
+  <aside class="section-nav" aria-label="Page sections">
+    <a href="#posts">Posts</a>
+  </aside>
+{% elsif page.layout == "post" %}
+  <aside class="section-nav" aria-label="Page sections">
+    <a href="#article">Article</a>
+  </aside>
+{% endif %}

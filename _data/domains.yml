@@ -1,15 +1,15 @@
-- id: robotics
-  name: Robotics
-  description: Autonomous systems and robotic control 
-
 - id: machine-learning
-  name: Machine Learning
+  name: ML
   description: Deep learning, neural networks, and AI research
 
+- id: robotics
+  name: Robotics
+  description: Autonomous systems and robotic control
+
 - id: design
-  name: Mechanical Design
+  name: Mechanical
   description: CAD, analysis, and mechanical systems
 
 - id: other
-  name: Other Projects
+  name: Other
   description: Miscellaneous technical projects 

@@ -1,83 +1,110 @@
 .about-section {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: var(--space-section) 2rem;   // or 3rem, etc.
-  display: grid;
-  grid-template-columns: 1fr 2fr;       // image 1/3, text 2/3
-  gap: 3rem;
-  align-items: center;
+  padding: 2.5rem 2rem 1.5rem;
+  text-align: center;
+  width: 100%;
 
-  /* Mobile fallback */
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .profile-image-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-
-    .profile-image {
-      width: 330px;
-      height: 330px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
-    }
+    padding-top: 6rem;
   }
 
   .about-content {
+    margin: 0 auto;
+    max-width: min(880px, calc(100vw - 4rem));
+    position: relative;
+
+    &::before {
+      background:
+        linear-gradient(180deg, transparent 0 38%, rgba(201, 143, 66, 0.08) 38.08%, transparent 38.22% 100%),
+        linear-gradient(180deg, transparent 0 51%, rgba(135, 147, 111, 0.065) 51.08%, transparent 51.22% 100%),
+        linear-gradient(90deg, transparent 0 49%, rgba(238, 229, 207, 0.045) 49.08%, transparent 49.18% 100%);
+      content: "";
+      height: 10rem;
+      left: -2rem;
+      opacity: 0.5;
+      pointer-events: none;
+      position: absolute;
+      right: -6rem;
+      top: -1.5rem;
+      transform: translateY(-100%);
+    }
+
+    .eyebrow {
+      color: var(--color-accent);
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
+      letter-spacing: 0.14em;
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+    }
+
     h1 {
-      font-size: 2.4rem; 
-      font-weight: 600;
-      margin-bottom: 1.5rem;
       color: var(--color-primary);
+      font-size: clamp(4.25rem, 11vw, 8.5rem);
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 0.9;
+      margin: 0 0 1.5rem;
+    }
+
+    h1::after {
+      background: linear-gradient(90deg, transparent, var(--color-accent), var(--color-accent-cool), transparent);
+      content: "";
+      display: block;
+      height: 1px;
+      margin: 1.5rem auto 0;
+      width: min(28rem, 100%);
+    }
+
+    h3 {
+      color: var(--color-primary);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      margin: 2rem 0 0.65rem;
+      text-transform: uppercase;
     }
 
     .intro {
-      font-size: 1.2rem;
-      color: var(--color-light-text);
+      color: var(--color-primary);
+      font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+      line-height: 1.45;
       margin-bottom: 2rem;
-      line-height: 1.6;
+      max-width: 45rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .about-details {
-      h3 {
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: var(--color-primary);
-        margin: 1.5rem 0 0.8rem;
-      }
+      color: var(--color-light-text);
+      margin: 0 auto;
+      max-width: 54rem;
+    }
 
-      p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--color-primary);
-        margin-bottom: 1.5rem;
-      }
+    .about-details p {
+      font-size: 1.18rem;
+      margin: 0 0 1.4rem;
+    }
 
-      ul {
-        list-style: none;
-        padding: 0;
+    .about-details ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      list-style: none;
+      margin: 0 0 1.5rem;
+      padding: 0;
+    }
 
-        li {
-          position: relative;
-          padding-left: 1.2rem;
-          margin-bottom: 0.5rem;
-          font-size: 1rem;
-          line-height: 1.6;
-          color: var(--color-primary);
-
-          &:before {
-            content: "•";
-            color: var(--color-accent);
-            position: absolute;
-            left: 0;
-          }
-        }
-      }
+    .about-details li {
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      color: var(--color-primary);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      padding: 0.45rem 0.75rem;
     }
   }
 }
