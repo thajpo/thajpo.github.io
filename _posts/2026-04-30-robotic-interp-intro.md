@@ -10,7 +10,7 @@ Mechanistic interpretability studies how model internals give rise to behavior, 
 
 For robotics, the question is especially concrete. If a robot is told to move one object but reaches for another, we can describe the failure behaviorally. But the mechanistic question is: did the model fail to represent the requested object, did it represent the wrong object, or did the action generator ignore the correct representation?
 
-![](/assets/uploads/1.png)
+![](/assets/uploads/1.png "Target selection")
 
 Robot policies have historically used RL to optimize towards goals such as grasping and manipulating objects. Recently, the success of large language and vision-language models has shifted part of the field toward generalist robot policies that combine pretrained with learned action generation. 
 
@@ -23,6 +23,8 @@ In short: understanding these robot foundation models is critical for safety, an
 Robot foundation models are moving at an incredible pace. The final architecture for scalable, performant robot policies is not yet clear. Some labs emphasize synthetic data and world models; others are building proprietary pretrained robot policies inspired by, but not identical to, VLA systems.
 
 Despite this uncertainty, there are clear properties of architectures that can let us 'plan ahead'. Large transformer backbones are often too expensive to use at low-level servo rates, and token-by-token action generation can introduce latency or jitter. Many recent policies therefore use action chunking, diffusion, or flow-matching heads to generate short-horizon continuous action sequences.
+
+![](/assets/uploads/3.png)
 
 Because architectures differ substantially across labs — from VLA-style policies to world-model-based systems and proprietary variants — an interpretability method should ideally target reusable components: **visual-language representations, action-conditioning interfaces, and diffusion/ action heads.**
 
@@ -43,6 +45,8 @@ What is also lacking in robotics interp is tooling and visualization for researc
 * How do you cleanly show how an activation transforms a trajectory?
 
 This is something I have spent some time thinking about, and I believe this subfield is new and ripe with opportunity for improved understanding and capabilities. 
+
+![](/assets/uploads/2.png)
 
 \# What I am working on now
 
