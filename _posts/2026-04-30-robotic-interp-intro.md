@@ -8,6 +8,10 @@ date: 2026-04-30
 
 Mechanistic interpretability studies how model internals give rise to behavior, often by identifying representations, circuits, and activation patterns that causally affect outputs. In recent years, it has picked up steam - being applied toward various foundation models to understand learned representations, improve safety, and isolate where failures occur.
 
+For robotics, the question is especially concrete. If a robot is told to move one object but reaches for another, we can describe the failure behaviorally. But the mechanistic question is: did the model fail to represent the requested object, did it represent the wrong object, or did the action generator ignore the correct representation?
+
+![](/assets/uploads/1.png)
+
 Robot policies have historically used RL to optimize towards goals such as grasping and manipulating objects. Recently, the success of large language and vision-language models has shifted part of the field toward generalist robot policies that combine pretrained with learned action generation. 
 
 In these works, authors often broadly characterize policy failures as failures to generalize, or follow instruction. I believe that a missing piece is a mechanistic analysis of where task-relevant representations are lost, distorted, or fail to influence action generation.
@@ -42,16 +46,18 @@ This is something I have spent some time thinking about, and I believe this subf
 
 \# What I am working on now
 
-To start, it is most useful to be as minimal as-possible. LeRobot has a pi 0.5 replication, and I am evaluating it to find interesting failure mechanisms. 
+To start, I think it is most useful to be as minimal as possible. LeRobot has a π0.5 replication, and I am evaluating it to find interesting failure mechanisms.
 
-As you may have noticed, it contains the critical components that I think future robot models will have (in some form) which makes it a great test-bed. 
+π0.5 contains several components that I expect future robot models to have in some form: visual-language conditioning, learned action generation, and short-horizon continuous action chunks. That makes it a useful testbed.
 
 As a teaser for next time:
 
-I am trying to understand where a vision-language-action policy stops letting the language-specified target object control the robot’s action. In some failures, the model does not “fail to generalize.” The instruction names one object, while the internal selected-object readout, generated action direction, and physical contact all converge on another. That gives us a concrete mechanistic question: *when the robot moves the wrong object, where did the wrong object enter the chain, and can we causally intervene on that chain?*
+I am trying to understand where a vision-language-action policy stops letting the language-specified target object control the robot’s action. In some failures, the model does not simply “fail to generalize.” The instruction names one object, while the internal selected-object readout, generated action direction, and physical contact all converge on another.
 
-The first posts will focus on building this object-chain view of robot failures. The later ones will move from observation to intervention: patching internal states to test whether we can shift a continuous action chunk from the wrong object back toward the requested target.
+The first posts will focus on building this object-chain view of robot failures. Later posts will move from observation to intervention: patching internal states to test whether we can shift a continuous action chunk from the wrong object back toward the requested target.
 
-Thanks for reading!
+Thanks for reading.
+
+![]()
 
 \-J
