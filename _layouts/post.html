@@ -12,19 +12,7 @@ layout: default
   </header>
 
   <div class="post-content">
-    {% assign lines = content | split: "
-" %}
-    {% assign filtered_lines = "" | split: "" %}
-    {% assign first_header_found = false %}
-    {% for line in lines %}
-      {% if line contains "# " and first_header_found == false %}
-        {% assign first_header_found = true %}
-      {% else %}
-        {% assign filtered_lines = filtered_lines | push: line %}
-      {% endif %}
-    {% endfor %}
-    {{ filtered_lines | join: "
-" }}
+    {{ content }}
   </div>
 
   <a href="{{ '/blog' | relative_url }}" class="back-button">

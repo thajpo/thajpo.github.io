@@ -125,6 +125,14 @@
     font-size: 1.28rem;
     line-height: 1.82;
     color: var(--color-primary);
+
+    h1 {
+      color: var(--color-primary);
+      font-size: 2.35rem;
+      font-weight: 400;
+      line-height: 1.12;
+      margin: 3rem 0 1.5rem;
+    }
     
     h2 {
       font-size: 2rem;
@@ -148,6 +156,42 @@
         color: var(--color-light-text);
         line-height: 1.6;
       }
+    }
+
+    img {
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      box-sizing: border-box;
+      box-shadow: var(--shadow-deep);
+      display: block;
+      height: auto;
+      margin: 2rem auto;
+      max-height: 72vh;
+      max-width: 100%;
+      object-fit: contain;
+      width: auto;
+    }
+
+    p > img:only-child {
+      margin-bottom: 2.25rem;
+      margin-top: 2.25rem;
+    }
+
+    figure {
+      margin: 2.25rem 0;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    figcaption {
+      color: var(--color-light-text);
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
+      line-height: 1.45;
+      margin-top: 0.75rem;
+      text-align: center;
     }
     
     ul, ol {
@@ -236,6 +280,10 @@
       
       h2 {
         font-size: 1.8rem;
+      }
+
+      h1 {
+        font-size: 2.05rem;
       }
       
       h3 {

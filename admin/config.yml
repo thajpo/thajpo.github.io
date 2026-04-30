@@ -47,6 +47,8 @@ collections:
       - name: body
         label: Body
         widget: markdown
+        modes:
+          - raw
 
   - name: projects
     label: Projects
@@ -155,3 +157,5 @@ collections:
       - name: body
         label: Body
         widget: markdown
+        modes:
+          - raw

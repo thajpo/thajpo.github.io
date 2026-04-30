@@ -4,7 +4,7 @@ title: Interpretability Applied to Robotics
 slug: robotic-interp-intro
 date: 2026-04-30
 ---
-\# Introduction
+# Introduction
 
 Mechanistic interpretability studies how model internals give rise to behavior, often by identifying representations, circuits, and activation patterns that causally affect outputs. In recent years, it has picked up steam - being applied toward various foundation models to understand learned representations, improve safety, and isolate where failures occur.
 
@@ -18,7 +18,7 @@ In these works, authors often broadly characterize policy failures as failures t
 
 In short: understanding these robot foundation models is critical for safety, and improved capabilities as we ramp up towards real-world deployments.
 
-\# Developing tooling in a moving field
+# Developing tooling in a moving field
 
 Robot foundation models are moving at an incredible pace. The final architecture for scalable, performant robot policies is not yet clear. Some labs emphasize synthetic data and world models; others are building proprietary pretrained robot policies inspired by, but not identical to, VLA systems.
 
@@ -28,11 +28,11 @@ Despite this uncertainty, there are clear properties of architectures that can l
 
 Because architectures differ substantially across labs — from VLA-style policies to world-model-based systems and proprietary variants — an interpretability method should ideally target reusable components: **visual-language representations, action-conditioning interfaces, and diffusion/ action heads.**
 
-\# Interpretability Applied to Robotics
+# Interpretability Applied to Robotics
 
 I am personally motivated by this problem because I see a future where robots are everywhere. We should thoroughly understand these systems, and where any harmful behaviors exist as a precursor to scaled deployment.
 
-Interpretability is also a means to understand where and why a model failed at a task. It can be used to create better datasets, architectures, or training methods. For example, *Goodfire* released \[Silico](https://www.goodfire.ai/silico) - a platform for localizing model failures. 
+Interpretability is also a means to understand where and why a model failed at a task. It can be used to create better datasets, architectures, or training methods. For example, *Goodfire* released [Silico](https://www.goodfire.ai/silico) - a platform for localizing model failures.
 
 When a model fails on a task, it is useful to localize activations that led to that outcome, rather than a different outcome. Therefore, a causal analysis is needed to understand what features lead to that outcome. Since these models are Frankenstein-ed with text, image, and action internals a causal analysis could be significantly harder than a standard LLM. 
 
@@ -48,7 +48,7 @@ This is something I have spent some time thinking about, and I believe this subf
 
 ![](/assets/uploads/2.png)
 
-\# What I am working on now
+# What I am working on now
 
 To start, I think it is most useful to be as minimal as possible. LeRobot has a π0.5 replication, and I am evaluating it to find interesting failure mechanisms.
 
@@ -62,6 +62,4 @@ The first posts will focus on building this object-chain view of robot failures.
 
 Thanks for reading.
 
-![]()
-
-\-J
+-J
