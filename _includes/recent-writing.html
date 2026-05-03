@@ -1,0 +1,27 @@
+{% assign build_version = site.time | date: "%s" %}
+{% assign recent_post = site.posts | first %}
+
+<div class="recent-writing">
+  <div class="section-header recent-writing-header">
+    <h2>
+      <a href="{{ '/blog' | relative_url }}">Writing</a>
+    </h2>
+  </div>
+
+  {% if recent_post %}
+    <a href="{{ recent_post.url | relative_url }}?v={{ build_version }}" class="recent-writing-card">
+      <span class="recent-writing-label">Latest</span>
+      <div class="recent-writing-content">
+        <h3>{{ recent_post.title }}</h3>
+        <time datetime="{{ recent_post.date | date_to_xmlschema }}">
+          {{ recent_post.date | date: "%B %-d, %Y" }}
+        </time>
+        {% if recent_post.description %}
+          <p>{{ recent_post.description }}</p>
+        {% else %}
+          <p>{{ recent_post.excerpt | strip_html | normalize_whitespace | truncate: 220 }}</p>
+        {% endif %}
+      </div>
+    </a>
+  {% endif %}
+</div>

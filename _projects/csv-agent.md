@@ -8,7 +8,8 @@ status: wip
 domain: other
 starred: true
 star_rank: 4
-has_github: false
+has_github: true
+github: "https://github.com/thajpo/csv-agent"
 ---
 
 ## Overview

@@ -3,7 +3,7 @@ layout: project
 title: "GNNs for Pose Anomaly Detection"
 subtitle: "Detecting anomalies in human poses"
 project_date: "January 2024 - May 2024"
-status: wip
+status: done
 domain: machine-learning
 image: "/assets/images/GNN.jpg"
 has_github: true

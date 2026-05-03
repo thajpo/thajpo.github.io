@@ -3,6 +3,132 @@
     margin: 6.5rem auto var(--space-section-lg);
     padding: 0 2rem;
   }
+
+  #writing {
+    scroll-margin-top: 5rem;
+  }
+
+  .recent-writing-header {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    h2 {
+      a {
+        color: var(--color-primary);
+        text-decoration: none;
+        transition: color var(--transition-speed);
+
+        &:hover,
+        &:focus-visible {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  .recent-writing {
+    margin: 0 auto 3.5rem;
+    max-width: var(--container-width);
+    padding: 0;
+  }
+
+  .recent-writing-card {
+    border-bottom: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
+    box-sizing: border-box;
+    color: inherit;
+    display: grid;
+    gap: 2.25rem;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    padding: 1.65rem 2.25rem 1.65rem 2.75rem;
+    position: relative;
+    text-decoration: none;
+    transition: background var(--transition-speed), border-color var(--transition-speed);
+
+    &::before {
+      background: var(--color-accent);
+      bottom: 0.85rem;
+      content: "";
+      left: 0.75rem;
+      opacity: 0;
+      position: absolute;
+      top: 0.85rem;
+      transition: opacity var(--transition-speed);
+      width: 1px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(230, 235, 255, 0.035);
+      border-color: rgba(127, 140, 255, 0.28);
+
+      &::before {
+        opacity: 0.75;
+      }
+
+      h3 {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  .recent-writing-label,
+  .recent-writing-content time {
+    color: var(--color-light-text);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .recent-writing-content {
+    h3 {
+      color: var(--color-primary);
+      font-size: clamp(1.75rem, 2.8vw, 2.45rem);
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.08;
+      margin: 0 0 0.45rem;
+      transition: color var(--transition-speed);
+    }
+
+    p {
+      color: var(--color-light-text);
+      font-size: 1.18rem;
+      line-height: 1.58;
+      margin: 0.75rem 0 0;
+      max-width: 780px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .recent-writing {
+      padding: 0;
+    }
+
+    .recent-writing-card {
+      gap: 0.6rem;
+      grid-template-columns: 1fr;
+      padding: 1.35rem 1rem 1.35rem 1.75rem;
+    }
+
+    .recent-writing-label,
+    .recent-writing-content time {
+      font-size: 0.78rem;
+    }
+
+    .recent-writing-content {
+      h3 {
+        font-size: clamp(1.55rem, 8vw, 2rem);
+      }
+
+      p {
+        font-size: 1.08rem;
+      }
+    }
+  }
   
   .blog-header {
     margin-bottom: 1.5rem;
@@ -45,17 +171,22 @@
   
   .blog-post-card {
     border-bottom: 1px solid var(--color-border);
+    box-sizing: border-box;
     overflow: hidden;
-    padding: 1.4rem 0;
+    padding: 1.65rem 2.25rem 1.65rem 2.75rem;
     transition: background var(--transition-speed), border-color var(--transition-speed);
+
+    &:nth-child(even) {
+      background: rgba(127, 140, 255, 0.028);
+    }
   
     &:hover {
-      background: rgba(238, 229, 207, 0.03);
-      border-color: rgba(201, 143, 66, 0.28);
+      background: rgba(230, 235, 255, 0.045);
+      border-color: rgba(127, 140, 255, 0.28);
     }
   
     h2 {
-      font-size: 1.85rem;
+      font-size: clamp(1.75rem, 2.8vw, 2.45rem);
       font-weight: 400;
       letter-spacing: 0;
       line-height: 1.12;
@@ -74,7 +205,7 @@
     .post-meta {
       color: var(--color-light-text);
       font-family: var(--font-sans);
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       letter-spacing: 0.08em;
       margin-bottom: 1rem;
       text-transform: uppercase;
@@ -82,8 +213,26 @@
   
     .post-excerpt {
       color: var(--color-light-text);
-      font-size: 1.14rem;
+      font-size: 1.18rem;
       line-height: 1.6;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .blog-post-card {
+      padding: 1.35rem 1rem 1.35rem 1.75rem;
+
+      h2 {
+        font-size: clamp(1.55rem, 8vw, 2rem);
+      }
+
+      .post-meta {
+        font-size: 0.78rem;
+      }
+
+      .post-excerpt {
+        font-size: 1.08rem;
+      }
     }
   }
   

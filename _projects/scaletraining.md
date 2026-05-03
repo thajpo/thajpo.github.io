@@ -6,7 +6,7 @@ date: 2026-01-29
 domain: machine-learning
 starred: true
 star_rank: 1
-status: done
+status: wip
 image: "/assets/images/GNN.jpg"
 has_github: true
 github: "https://github.com/thajpo/ScaleTraining"

@@ -3,7 +3,7 @@ layout: project
 title: "Constrained Gearbox Design"
 subtitle: "12:1 ratio gearbox with geometric constraints"
 project_date: "April 2023 - May 2023"
-status: wip
+status: done
 domain: design
 image: "/assets/images/gearbox.png"
 has_github: false

@@ -3,7 +3,7 @@ layout: project
 title: "SLAM Implementation"
 subtitle: "Simultaneous Localization and Mapping"
 project_date: "October 2024 - December 2024"
-status: wip
+status: done
 domain: robotics
 image: "/assets/images/SLAM.jpg"
 has_github: true

@@ -3,7 +3,7 @@ layout: project
 title: "Pediatric Bone Screw Analysis"
 subtitle: "Design modification and FEA analysis"
 project_date: "March 2023 - April 2023"
-status: wip
+status: done
 domain: design
 image: "/assets/images/bone-screw-render.png"
 has_github: false

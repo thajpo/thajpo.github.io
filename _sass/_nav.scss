@@ -9,12 +9,13 @@ nav {
   z-index: 10;
 
   ul {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    justify-items: center;
     list-style-type: none;
-    gap: clamp(1.25rem, 4vw, 3rem);
+    margin: 0 auto;
+    max-width: 18rem;
     padding: 0.85rem 1rem;
   }
 
@@ -54,60 +55,6 @@ nav {
 
 }
 
-.section-nav {
-  align-items: flex-start;
-  background: rgba(18, 16, 12, 0.24);
-  border-left: 1px solid rgba(201, 143, 66, 0.22);
-  backdrop-filter: blur(14px);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  left: max(0.75rem, calc((100vw - var(--container-width)) / 2 - 17rem));
-  padding: 0.3rem 0 0.3rem 0.95rem;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 9;
-
-  a {
-    color: var(--color-light-text);
-    font-family: var(--font-sans);
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    line-height: 1.2;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: color var(--transition-speed);
-
-    &::before {
-      background: rgba(201, 143, 66, 0.24);
-      content: "";
-      height: 1px;
-      left: -0.95rem;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0.55rem;
-    }
-
-    &:hover,
-    &:focus-visible {
-      color: var(--color-accent);
-
-      &::before {
-        background: var(--color-accent-warm);
-        width: 0.8rem;
-      }
-    }
-  }
-}
-
-.mobile-section-nav {
-  display: none;
-}
-
 @media (max-width: 768px) {
   nav {
     a {
@@ -116,49 +63,9 @@ nav {
     }
 
     ul {
-      gap: clamp(0.95rem, 5vw, 1.8rem);
+      max-width: 16rem;
       padding: 0.75rem 0.85rem;
     }
   }
 
-  .section-nav {
-    display: none;
-  }
-
-  .mobile-section-nav {
-    background: rgba(18, 16, 12, 0.84);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--color-border);
-    box-sizing: border-box;
-    display: flex;
-    gap: 0.9rem;
-    left: 0;
-    overflow-x: auto;
-    padding: 0.65rem 1rem;
-    position: fixed;
-    scrollbar-width: none;
-    top: 2.85rem;
-    width: 100%;
-    z-index: 9;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    a {
-      color: var(--color-light-text);
-      flex: 0 0 auto;
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.11em;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &:hover,
-      &:focus-visible {
-        color: var(--color-accent);
-      }
-    }
-  }
 }

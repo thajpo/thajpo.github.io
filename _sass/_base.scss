@@ -1,16 +1,16 @@
 :root {
-  --color-background: #12100c;
-  --color-surface: #1a1710;
-  --color-primary: #eee5cf;
-  --color-accent: #c98f42;
-  --color-accent-cool: #87936f;
-  --color-accent-warm: #a46b48;
-  --color-nav-bg: rgba(18, 16, 12, 0.8);
-  --color-section-bg: rgba(238, 229, 207, 0.045);
-  --color-card-bg: rgba(26, 23, 16, 0.78);
-  --color-light-text: #b8ac91;
-  --color-border: rgba(201, 143, 66, 0.18);
-  --color-hover: #dfb36d;
+  --color-background: #070914;
+  --color-surface: #101525;
+  --color-primary: #e6ebff;
+  --color-accent: #7f8cff;
+  --color-accent-cool: #5fb7d4;
+  --color-accent-warm: #9b6bff;
+  --color-nav-bg: rgba(7, 9, 20, 0.84);
+  --color-section-bg: rgba(139, 151, 255, 0.055);
+  --color-card-bg: rgba(12, 17, 33, 0.8);
+  --color-light-text: #aeb7d8;
+  --color-border: rgba(127, 140, 255, 0.22);
+  --color-hover: #a6adff;
   --font-serif: Georgia, "Times New Roman", serif;
   --font-sans: "Trebuchet MS", Verdana, sans-serif;
   --shadow-deep: 0 24px 80px rgba(0, 0, 0, 0.38);
@@ -23,10 +23,10 @@
 body {
   background-color: var(--color-background);
   background-image:
-    radial-gradient(ellipse at 18% 8%, rgba(201, 143, 66, 0.1), transparent 28rem),
-    radial-gradient(ellipse at 86% 24%, rgba(135, 147, 111, 0.085), transparent 34rem),
-    radial-gradient(ellipse at 48% 118%, rgba(84, 64, 37, 0.32), transparent 46rem),
-    linear-gradient(180deg, #12100c 0%, #15120d 48%, #0d0d09 100%);
+    radial-gradient(ellipse at 18% 8%, rgba(127, 140, 255, 0.14), transparent 28rem),
+    radial-gradient(ellipse at 86% 24%, rgba(155, 107, 255, 0.12), transparent 34rem),
+    radial-gradient(ellipse at 48% 118%, rgba(33, 62, 121, 0.36), transparent 46rem),
+    linear-gradient(180deg, #070914 0%, #0a1020 48%, #050711 100%);
   background-attachment: fixed;
   color: var(--color-primary);
   font-family: var(--font-serif);
@@ -44,9 +44,9 @@ html {
 
 body::before {
   background-image:
-    linear-gradient(90deg, rgba(238, 229, 207, 0.034) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(238, 229, 207, 0.024) 1px, transparent 1px),
-    radial-gradient(circle, rgba(201, 143, 66, 0.18) 0 0.6px, transparent 1px);
+    linear-gradient(90deg, rgba(230, 235, 255, 0.032) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(230, 235, 255, 0.022) 1px, transparent 1px),
+    radial-gradient(circle, rgba(127, 140, 255, 0.2) 0 0.6px, transparent 1px);
   background-position: 0 0, 0 0, 38px 64px;
   background-size: 92px 92px, 92px 92px, 360px 360px;
   content: "";
@@ -60,9 +60,9 @@ body::before {
 body::after {
   background-image:
     radial-gradient(ellipse at 50% 16%, transparent 0%, rgba(0, 0, 0, 0.24) 62%, rgba(0, 0, 0, 0.7) 100%),
-    linear-gradient(180deg, rgba(238, 229, 207, 0.034), transparent 18rem),
-    linear-gradient(93deg, transparent 0 47%, rgba(201, 143, 66, 0.024) 47.04%, transparent 47.18% 100%),
-    linear-gradient(88deg, transparent 0 55%, rgba(135, 147, 111, 0.022) 55.04%, transparent 55.18% 100%);
+    linear-gradient(180deg, rgba(230, 235, 255, 0.032), transparent 18rem),
+    linear-gradient(93deg, transparent 0 47%, rgba(127, 140, 255, 0.032) 47.04%, transparent 47.18% 100%),
+    linear-gradient(88deg, transparent 0 55%, rgba(155, 107, 255, 0.026) 55.04%, transparent 55.18% 100%);
   background-size: auto, auto, auto, auto;
   content: "";
   inset: 0;
@@ -80,7 +80,7 @@ body > .site-lines {
 
   &::before,
   &::after {
-    background: rgba(201, 143, 66, 0.15);
+    background: rgba(127, 140, 255, 0.16);
     content: "";
     position: absolute;
     top: 5.25rem;
@@ -90,12 +90,12 @@ body > .site-lines {
 
   &::before {
     left: max(5.25rem, calc((100vw - var(--container-width)) / 2 - 8.125rem));
-    box-shadow: 12px 0 0 rgba(135, 147, 111, 0.06);
+    box-shadow: 12px 0 0 rgba(95, 183, 212, 0.08);
   }
 
   &::after {
     right: max(2.25rem, calc((100vw - var(--container-width)) / 2 - 8.125rem));
-    box-shadow: -12px 0 0 rgba(135, 147, 111, 0.06);
+    box-shadow: -12px 0 0 rgba(155, 107, 255, 0.08);
   }
 }
 
@@ -104,7 +104,7 @@ a {
 }
 
 ::selection {
-  background: rgba(201, 143, 66, 0.34);
+  background: rgba(127, 140, 255, 0.34);
   color: var(--color-primary);
 }
 
@@ -112,7 +112,7 @@ a {
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 66vh;
+  min-height: 54vh;
   padding-top: 4.5rem;
   position: relative;
   z-index: 1;

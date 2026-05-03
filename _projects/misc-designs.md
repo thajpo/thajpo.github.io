@@ -3,7 +3,7 @@ layout: project
 title: "Miscellaneous Design Projects"
 subtitle: "Collection of various mechanical design projects"
 project_date: "September 2021 - September 2022"
-status: wip
+status: done
 domain: design
 image: "/assets/images/phone-holder.png"
 has_github: false

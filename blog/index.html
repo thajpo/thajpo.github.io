@@ -19,7 +19,7 @@ title: Blog
         {% if post.image %}
         <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-image">
         {% endif %}
-        <div class="post-content">
+        <div class="blog-card-content">
           <h2>
             <a href="{{ post.url | relative_url }}?v={{ build_version }}">{{ post.title }}</a>
           </h2>

@@ -1,29 +1,33 @@
-<div class="section-header">
-  <h2>Projects</h2>
+<div class="projects-layout">
+  <div class="projects-content">
+    <div class="section-header">
+      <h2>Projects</h2>
+    </div>
+
+    {% assign starred_projects = site.projects | where: "starred", true | sort: "star_rank" %}
+    {% if starred_projects.size > 0 %}
+      <div id="starred" class="project-domain">
+        <h3>Starred</h3>
+        <div class="project-container">
+          {% for project in starred_projects %}
+            {% include project-card.html project=project %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% for domain in site.data.domains %}
+      <div id="{{ domain.id }}" class="project-domain">
+        <h3>{{ domain.name }}</h3>
+        <div class="project-container">
+          {% assign domain_projects = site.projects | where: "domain", domain.id %}
+          {% assign unstarred_projects = domain_projects | where_exp: "project", "project.starred != true" %}
+          {% assign sorted_projects = unstarred_projects | sort: "project_date" | reverse %}
+          {% for project in sorted_projects %}
+            {% include project-card.html project=project %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
-
-{% assign starred_projects = site.projects | where: "starred", true | sort: "star_rank" %}
-{% if starred_projects.size > 0 %}
-  <div id="starred" class="project-domain">
-    <h3>Starred</h3>
-    <div class="project-container">
-      {% for project in starred_projects %}
-        {% include project-card.html project=project %}
-      {% endfor %}
-    </div>
-  </div>
-{% endif %}
-
-{% for domain in site.data.domains %}
-  <div id="{{ domain.id }}" class="project-domain">
-    <h3>{{ domain.name }}</h3>
-    <div class="project-container">
-      {% assign domain_projects = site.projects | where: "domain", domain.id %}
-      {% assign unstarred_projects = domain_projects | where_exp: "project", "project.starred != true" %}
-      {% assign sorted_projects = unstarred_projects | sort: "project_date" | reverse %}
-      {% for project in sorted_projects %}
-        {% include project-card.html project=project %}
-      {% endfor %}
-    </div>
-  </div>
-{% endfor %} 

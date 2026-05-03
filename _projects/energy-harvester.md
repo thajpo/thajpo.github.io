@@ -3,7 +3,7 @@ layout: project
 title: "Nonlinear Energy Harvester Analysis"
 subtitle: "Magnetic suspension system dynamics study"
 project_date: "November 2024 - December 2024"
-status: wip
+status: done
 domain: other
 image: "/assets/images/energy-harvester.png"
 has_github: false

@@ -3,7 +3,7 @@ layout: project
 title: "Autonomous Cup Manipulation"
 subtitle: "Research project using LoCoBot for precise liquid handling"
 project_date: "January 2023 - January 2024"
-status: wip
+status: done
 domain: robotics
 image: "/assets/images/LoCoBot.jpg"
 has_github: false
