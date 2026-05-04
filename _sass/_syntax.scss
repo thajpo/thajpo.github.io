@@ -1,0 +1,94 @@
+.post-content,
+.main-content {
+  code {
+    background: var(--color-section-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    color: #d8f3ff;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.9em;
+    padding: 0.2rem 0.4rem;
+  }
+
+  pre {
+    background: #080c16;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    line-height: 1.55;
+    margin: 2rem 0;
+    overflow-x: auto;
+    padding: 1.5rem;
+
+    code {
+      background: none;
+      border: 0;
+      color: inherit;
+      display: block;
+      padding: 0;
+    }
+  }
+
+  .highlight {
+    background: #080c16;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin: 2rem 0;
+    overflow-x: auto;
+
+    pre {
+      background: transparent;
+      border: 0;
+      margin: 0;
+    }
+
+    .c,
+    .cm,
+    .cp,
+    .c1 {
+      color: #7c879e;
+      font-style: italic;
+    }
+
+    .k,
+    .kd,
+    .kn,
+    .kp,
+    .kr,
+    .kt {
+      color: #ffb86c;
+    }
+
+    .n,
+    .na,
+    .nb,
+    .nc,
+    .nf {
+      color: #e6ebff;
+    }
+
+    .mi,
+    .mf,
+    .m {
+      color: #8be9fd;
+    }
+
+    .s,
+    .sb,
+    .s1,
+    .s2 {
+      color: #b9f18d;
+    }
+
+    .o,
+    .p {
+      color: #aeb7d8;
+    }
+  }
+
+  mjx-container {
+    color: var(--color-primary);
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.15rem 0;
+  }
+}

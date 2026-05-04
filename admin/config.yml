@@ -47,7 +47,9 @@ collections:
       - name: body
         label: Body
         widget: markdown
+        hint: Use $...$ for inline LaTeX, $$...$$ for display equations, and fenced code blocks like ```python.
         modes:
+          - rich_text
           - raw
 
   - name: projects
@@ -157,5 +159,7 @@ collections:
       - name: body
         label: Body
         widget: markdown
+        hint: Use $...$ for inline LaTeX, $$...$$ for display equations, and fenced code blocks like ```python.
         modes:
+          - rich_text
           - raw
