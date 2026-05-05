@@ -401,15 +401,20 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    justify-content: center;
+    line-height: 1.2;
     margin-top: 3rem;
+    max-width: 100%;
     padding: 0.8rem 1.5rem;
     color: var(--color-primary);
     font-family: var(--font-sans);
     font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.08em;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    overflow-wrap: anywhere;
     transition: color var(--transition-speed);
     
     &:hover {
@@ -432,6 +437,10 @@
       .post-title {
         font-size: 2.8rem;
       }
+    }
+
+    .back-button {
+      width: 100%;
     }
     
     .post-content {

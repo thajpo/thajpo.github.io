@@ -20,8 +20,11 @@
   text-decoration: none;
   color: var(--color-primary);
   font-size: 1.1rem;
+  line-height: 1.25;
   padding: 1rem;
   border-radius: 8px;
+  overflow-wrap: anywhere;
+  text-align: center;
   transition: all var(--transition-speed);
   
   i {
