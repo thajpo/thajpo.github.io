@@ -9,13 +9,13 @@ nav {
   z-index: 10;
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     align-items: center;
-    justify-items: center;
+    gap: 2rem;
+    justify-content: center;
     list-style-type: none;
     margin: 0 auto;
-    max-width: 18rem;
+    max-width: max-content;
     padding: 0.85rem 1rem;
   }
 
@@ -64,9 +64,10 @@ nav {
 
     ul {
       box-sizing: border-box;
+      gap: clamp(0.85rem, 7vw, 1.6rem);
       max-width: 100%;
       padding: 0.75rem var(--mobile-page-gutter);
-      width: 100%;
+      width: max-content;
     }
   }
 
