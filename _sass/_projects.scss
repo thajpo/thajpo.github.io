@@ -201,6 +201,16 @@
 }
 
 @media (max-width: 640px) {
+  .section-header {
+    margin: 2.25rem auto 1.35rem;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2.35rem, 14vw, 3.75rem);
+      line-height: 1;
+    }
+  }
+
   .project-domain {
     margin: 3rem 0 4rem;
   }

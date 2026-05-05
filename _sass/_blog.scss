@@ -219,6 +219,31 @@
   }
 
   @media (max-width: 640px) {
+    .blog-section {
+      margin-top: 5.75rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .blog-header {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 1.75rem;
+      text-align: center;
+
+      h1 {
+        font-size: clamp(2.65rem, 16vw, 4rem);
+        line-height: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    .blog-home-back {
+      justify-content: center;
+    }
+
     .blog-post-card {
       padding: 1.35rem 1rem 1.35rem 1.75rem;
 
