@@ -24,6 +24,7 @@ In this instance, we will predict scene objects using model activations. This is
 $$
 \hat{y}=\sigma(Wh+b)
 $$
+
 *note: other probes are used, and will be explained later*.
 
 The probe is fitting $w$ and $b$ to predict our target labels as a probability from the activations $h$. Each class gets its own binary outcome, 
