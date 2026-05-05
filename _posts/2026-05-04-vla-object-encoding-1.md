@@ -32,4 +32,5 @@ Overfitting and Confounds
 
 To prevent leakage, we also do our test/train split by-episode. Otherwise the probe can easily correlate activations to scene information and find out what the objects are.
 
-The dataset used is 
+The dataset used is LIBERO, but inside there are scenes and various tasks.
+
