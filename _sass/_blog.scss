@@ -105,13 +105,19 @@
 
   @media (max-width: 640px) {
     .recent-writing {
+      box-sizing: border-box;
+      max-width: 100%;
       padding: 0;
     }
 
     .recent-writing-card {
       gap: 0.6rem;
       grid-template-columns: 1fr;
-      padding: 1.35rem 1rem 1.35rem 1.75rem;
+      padding: 1.25rem var(--mobile-page-gutter);
+
+      &::before {
+        left: 0;
+      }
     }
 
     .recent-writing-label,
@@ -221,8 +227,8 @@
   @media (max-width: 640px) {
     .blog-section {
       margin-top: 5.75rem;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      padding-left: var(--mobile-page-gutter);
+      padding-right: var(--mobile-page-gutter);
     }
 
     .blog-header {
@@ -245,7 +251,7 @@
     }
 
     .blog-post-card {
-      padding: 1.35rem 1rem 1.35rem 1.75rem;
+      padding: 1.25rem var(--mobile-page-gutter);
 
       h2 {
         font-size: clamp(1.55rem, 8vw, 2rem);
@@ -418,8 +424,8 @@
   @media (max-width: 768px) {
     .blog-section,
     .post {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      padding-left: var(--mobile-page-gutter);
+      padding-right: var(--mobile-page-gutter);
     }
 
     .post-header {
@@ -430,6 +436,15 @@
     
     .post-content {
       font-size: 1.16rem;
+
+      blockquote {
+        padding: 1rem 1.15rem;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.35rem;
+      }
       
       h2 {
         font-size: 1.8rem;

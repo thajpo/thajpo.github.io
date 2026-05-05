@@ -58,13 +58,15 @@ nav {
 @media (max-width: 768px) {
   nav {
     a {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
     }
 
     ul {
-      max-width: 16rem;
-      padding: 0.75rem 0.85rem;
+      box-sizing: border-box;
+      max-width: 100%;
+      padding: 0.75rem var(--mobile-page-gutter);
+      width: 100%;
     }
   }
 

@@ -18,6 +18,7 @@
   --container-width: 1180px;
   --space-section: 3.25rem;
   --space-section-lg: 5rem;
+  --mobile-page-gutter: 1.25rem;
 }
 
 body {
@@ -132,6 +133,12 @@ a {
     align-items: flex-start;
     min-height: auto;
     padding-top: 6.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --mobile-page-gutter: 1rem;
   }
 }
 
