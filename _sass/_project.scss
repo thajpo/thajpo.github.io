@@ -63,11 +63,11 @@
   padding: 0.28rem 0.7rem;
   text-transform: uppercase;
 
-  &.completed {
+  &.done {
     color: var(--color-accent-cool);
   }
 
-  &.ongoing {
+  &.wip {
     color: var(--color-accent-warm);
   }
 }
@@ -225,11 +225,11 @@
     padding: 0.2rem 0.8rem;
     border-radius: 12px;
   
-    &.completed {
+    &.done {
       color: var(--color-accent-cool);
     }
   
-    &.ongoing {
+    &.wip {
       color: var(--color-accent-warm);
     }
   }
